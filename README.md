@@ -80,19 +80,19 @@ _All tests produce structured logs so each step is transparent._
 
 1. **Clone and install dependencies**
 
-   ```sh
+```sh
    git clone <https://github.com/vlk-louis/Flashcard-Scheduler.git>
    cd Flashcard-Scheduler
    uv sync --all-groups
-   ```
+```
 
 2. **Setup PostgreSQL (15+)**
 
-   ```sh
+```sh
    brew install postgresql@15
    brew services start postgresql@15
    createdb flashcards
-   ```
+```
 
 3. **Environment Configuration**
 
@@ -102,31 +102,38 @@ _All tests produce structured logs so each step is transparent._
 
    Example `.env` (not committed to git):
 
-   ```env
+```env
    POSTGRES_DB=flashcards
    POSTGRES_USER=postgres
    POSTGRES_PASSWORD=supersecret
    POSTGRES_HOST=localhost
    POSTGRES_PORT=5432
-   ```
+```
 
-4. **Run migrations**
+4. **Navigate to project folder**
+```sh
+cd general-assignment-template
+```
 
-   ```sh
-   uv run python manage.py migrate
-   ```
+5. **Run migrations**
 
-5. **Start server**
+```sh
+uv sync --all-groups
 
-   ```sh
+uv run manage.py migrate
+```
+
+6. **Start server**
+
+```sh
    uv run python manage.py runserver
-   ```
+```
 
-6. **Run tests**
+7. **Run tests**
 
-   ```sh
+```sh
    uv run poe test
-   ```
+```
 
 _Tests cover:_
 - Unit rules validation
@@ -149,11 +156,12 @@ _Tests cover:_
 
 ---
 
-## 🏁 One-liner Quickstart
+## One-liner Quickstart
 
 ```sh
 brew services start postgresql@15 \
   && createdb flashcards \
+  && cd general-assignment-template \
   && uv sync --all-groups \
   && uv run python manage.py migrate \
   && uv run python manage.py runserver \
