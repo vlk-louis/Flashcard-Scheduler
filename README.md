@@ -49,7 +49,7 @@ def schedule_next(rating, last_interval):
    - First review with rating=2 → 4 days
 3. **Monotonic growth:**
    - Intervals are calculated as a function of the previous interval × growth factor, guaranteeing non-decreasing intervals across review cycles.
-4. **Cap Rule — Maximum interval ≤ 1 year:**
+4. **Cap Rule | Maximum interval ≤ 1 year:**
    - Growth stops at 31,536,000 seconds, preventing runaway intervals.
 
 ---
