@@ -118,21 +118,19 @@ cd general-assignment-template
 5. **Run migrations**
 
 ```sh
-uv sync --all-groups
-
 uv run manage.py migrate
 ```
 
 6. **Start server**
 
 ```sh
-   uv run python manage.py runserver
+uv run python manage.py runserver
 ```
 
 7. **Run tests**
 
 ```sh
-   uv run poe test
+uv run poe test
 ```
 
 _Tests cover:_
