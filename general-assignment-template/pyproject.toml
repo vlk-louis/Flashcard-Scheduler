@@ -1,0 +1,26 @@
+[project]
+name = "flashcard-scheduler"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=5.2.4",
+    "djangorestframework>=3.16.0",
+]
+
+[dependency-groups]
+dev = [
+    "poethepoet>=0.36.0",
+    "pytest>=8.4.1",
+    "pytest-django>=4.11.1",
+    "ruff>=0.12.7",
+]
+
+[tool.poe.env]
+DJANGO_SETTINGS_MODULE = "assignment.settings"
+
+[tool.poe.tasks]
+lint = "ruff check --fix ."
+format = "ruff format ."
+test = "pytest"

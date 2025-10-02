@@ -1,0 +1,55 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Django / DB ---
+db.sqlite3
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# --- Postgres ---
+# Local dumps / configs
+*.sql
+*.psql
+
+# --- Env files ---
+.env
+*.env
+.env.*
+
+# --- pytest / coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# --- Logs ---
+*.log
+*.log.*
+logs/
+logging/
+
+# --- IDE / editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- macOS cruft ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Poetry / uv ---
+poetry.lock
+.uv/
