@@ -1,4 +1,4 @@
-# Flashcard Scheduler 📚
+# Flashcard Scheduler
 
 A Django + DRF project implementing a **spaced repetition scheduling algorithm** with PostgreSQL persistence.
 The system determines when flashcards should next be reviewed, based on user feedback, while enforcing **deterministic growth, idempotency, and data durability**.
